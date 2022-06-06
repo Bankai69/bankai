@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FlexModel</title>
+    <style>
+    body{
+      color: #40514E;
+      margin: 0;
+      text-align: center;
+      font-family: 'Merriweather', serif;
+    }
+    .fcontainer{
+      position: fixed;
+      display: flex;
+      background-color: black;
+      height: 4rem;
+      width: 100%;
+      align-items: stretch;
+    }
+    .fitem{
+      color: white;
+      background-color: black;
+      border-radius: 10px;
+      padding: 4px;
+      margin: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .fitem1{
+      color: white;
+      background-color: black;
+      border-radius: 10px;
+      padding: 4px;
+      margin: 1rem;
+      font-size: 20px;
+      font-family: 'Sacramento', cursive;
+      position: relative;
+      margin-left: 37%;
+
+    }
+    .image1{
+      height: 30rem;
+      width: 100%
+    }
+    h2{
+      color: black;
+      font-weight: normal;
+      font-size: 2.5rem;
+      margin-top: 5rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+    h5{
+      color: grey;
+      font-weight: lighter;
+      line-height: 1;
+    }
+    p{
+      width: 60%;
+      margin: 0 auto;
+      font-weight: normal;
+    }
+    .flexName{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .flexPhoto{
+      padding: 5rem;
+      margin-top: 5rem;
+      height: 40vh;
+      flex-grow: 1;
+    }
+    .image2{
+      margin-top: 2rem;
+      max-height: 100%;
+      min-width: 100%;
+      vertical-align: top;
+
+    }
+    .tour{
+      background-color: black;
+      width: 100%;
+    }
+    h1{
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      margin-top: 5rem;
+      padding-top: 5rem;
+    }
+    .topbox{
+      background-color: white;
+      width: 50%;
+      height: 11rem;
+      margin: auto;
+    }
+    .month li{
+      color: grey;
+    }
+    .unorderd{
+      color: #757575;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sold{
+      color: #fff;
+      background-color: #f44336;
+      margin-left: 16px;
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      text-align: center;
+    }
+    .number{
+      float: right;
+      margin-right: 16px;
+      border-radius: 50%;
+      background-color: #000;
+      color: #fff;
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      text-align: center;
+    }
+    li {
+        display: list-item;
+        text-align: left;
+        padding: 0.3rem;
+
+    }
+
+    ul {
+      width: 60%;
+      margin-top: 2rem;
+
+        display: block;
+        list-style: none;
+
+    }
+    .a{
+      display: flex;
+      justify-content: center;
+    }
+    .Remember{
+      margin-bottom: 2rem;
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .card{
+      background: white;
+      width: 270px;
+      height: 400px;
+      margin: 10px;
+      border-radius: 5px;
+
+    }
+    .card-image{
+      background-color: aqua;
+      height: 170px;
+      margin-bottom: 7px;
+      background-size: cover;
+      border-radius: 5px 5px 0 0;
+
+    }
+    .newyork{
+      background-image: url('https://images.unsplash.com/25/black-white-city.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMG5ldyUyMHlvcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60');
+    }
+    .paris{
+      background-image: url('https://images.unsplash.com/photo-1622748376718-fcb779eb23ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMHBhcmlzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60');
+    }
+    .san{
+      background-image: url('https://m.media-amazon.com/images/I/71L-QduZFhL._SL1280_.jpg');
+    }
+    .title{
+      font-size: 20px;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 15px;
+      margin-left: 15px;
+      font-weight: bolder;
+    }
+    .t{
+      font-size: 15px;
+      margin-left: 15px;
+      text-align: left;
+      justify-content: flex-start;
+      margin-bottom: 3px;
+    }
+    .anchor{
+      padding: 0.6rem;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      background-color: black;
+      align-items: left;
+      margin-right: 140px;
+    }
+    .dates{
+      color: grey;
+      font-size: 15px;
+      margin-left: 15px;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    .contact-heading{
+      font-weight: normal;
+      margin-bottom: -2px;
+    }
+    .fans{
+      font-size: 15px;
+      margin-bottom: 2rem;
+    }
+    .contact-div{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .contact-section{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      width: 60%;
+      margin: auto;
+      justify-content: center;
+    }
+
+    #name{
+      width: 14.5rem;
+      height: 40px;
+    }
+    #email{
+      width: 14.5rem;
+      height: 40px;
+    }
+    #comments{
+      height: 40px;
+      width: 30rem;
+    }
+    .form-detail{
+      padding: 4rem;
+    }
+    .btn {
+      justify-content: center;
+      background: #000000;
+      background-image: -webkit-linear-gradient(top, #000000, #000000);
+      background-image: -moz-linear-gradient(top, #000000, #000000);
+      background-image: -ms-linear-gradient(top, #000000, #000000);
+      background-image: -o-linear-gradient(top, #000000, #000000);
+      background-image: linear-gradient(to bottom, #000000, #000000);
+      -webkit-border-radius: 4;
+      -moz-border-radius: 4;
+      border-radius: 4px;
+      font-family: Courier New;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #8f8f8f;
+      background-image: -webkit-linear-gradient(top, #8f8f8f, #525252);
+      background-image: -moz-linear-gradient(top, #8f8f8f, #525252);
+      background-image: -ms-linear-gradient(top, #8f8f8f, #525252);
+      background-image: -o-linear-gradient(top, #8f8f8f, #525252);
+      background-image: linear-gradient(to bottom, #8f8f8f, #525252);
+      text-decoration: none;
+    }
+    .street-image{
+      width: 100%;
+      margin-top: 6rem;
+      height: 35rem;
+      object-fit: cover;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    .bottom-container{
+      margin-top: 100px;
+      background-color: lightgrey;
+      padding: 50px 0 20px;
+    }
+    .copyright{
+      color: grey;
+      font-size: 0.75rem;
+      padding: 20px 0;
+    }
+    .fa:hover{
+      opacity: 0.9;
+    }
+
+    .fa-linkedin {
+      color: grey;
+    }
+
+    .fa-pinterest {
+
+        color: grey;
+    }
+
+    .fa-reddit {
+
+      color: grey;
+    }
+    .fa {
+      padding: 5px;
+      font-size: 50px;
+      width: 10px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 700px)
+    {
+      body
+      {
+        background-color: #FFF2F2;
+      }
+      .number{
+        float: none;
+      }
+    }
+    </style>
+    <link rel="icon" href="favband.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb7255d097.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  </head>
+  <body>
+    <div class="fcontainer">
+      <div class="fitem">Home</div>
+      <div class="fitem1">The Band</div>
+    </div>
+    <img class="image1" src="6151194.jpg" alt="man-guiter">
+    <h2>THE BAND</h2>
+    <h5><i>We love music</i></h5>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    <div class="flexName">
+      <div class="flexPhoto">
+        <span>Name</span>
+        <img class="image2" src="data:image/jpeg;base64,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" alt="camera-img">
+      </div>
+      <div class="flexPhoto">
+        <span>Name</span>
+        <img class="image2" src="data:image/jpeg;base64,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" alt="camera-img">
+      </div>
+      <div class="flexPhoto">
+        <span>Name</span>
+        <img class="image2" src="data:image/jpeg;base64,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" alt="camera-img">
+      </div>
+    </div>
+    <div class="tour">
+      <div>
+        <h1>TOUR DATES</h1>
+        <h5 class="Remember"><i>Remember to book your tickets!</i></h5>
+      </div>
+      <br>
+      <div class="a">
+        <ul class="unorderd">
+          <li class="month">
+            September
+            <span class="sold">Sold out</span>
+          </li>
+          <hr>
+          <li class="month">
+            October
+            <span class="sold">Sold out</span>
+          </li>
+          <hr>
+          <li class="month">
+            November
+            <span class="number">3</span>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <br>
+      <section class="container">
+        <div class="card">
+          <div class="card-image newyork"></div>
+            <h2 class="title">Newyork</h2>
+            <p class="dates">Wed 1 Jan 2022</p>
+            <p class="t">New York, constituent state of the United States of America, one of the 13 original colonies and states.</p>
+            <br>
+            <a href="" class="anchor">Buy Tickets</a>
+        </div>
+        <div class="card">
+          <div class="card-image paris"></div>
+            <h2 class="title">Paris</h2>
+            <p class="dates">Thu 2 Jan 2022</p>
+            <p class="t">Paris is one of the most beautiful cities in the world.Also known as the Latin Quarter love city known.</p>
+            <br>
+            <a href="" class="anchor">Buy Tickets</a>
+        </div>
+        <div class="card">
+          <div class="card-image san"></div>
+            <h2 class="title">San Francisco</h2>
+            <p class="dates">Fri 3 Jan 2022</p>
+            <p class="t">San Francisco the City and County of San Francisco,financial center in the U.S. state of California.</p>
+            <br>
+            <a href="" class="anchor">Buy Tickets</a>
+        </div>
+      </section>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="contact">
+      <h2 class="contact-heading">CONTACT</h2>
+      <h5 class="fans"><i>Fans? Drop a note!</i></h5>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="contact-section">
+
+        <div class="contact-div">
+          <div>
+            <i class='fa fa-map-marker-alt' style="width:30px"></i>
+            Chicago, US
+          </div>
+          <br>
+          <div>
+            <i class='fa fa-phone' style="width:30px"></i>
+              +00 15151515
+          </div>
+          <br>
+          <div>
+            <i class="fa fa-envelope" style="width:30px"></i></i>
+              Email:-mail@mail.com
+          </div>
+          <br>
+        </div>
+        <div class="form-detail">
+          <div class="form">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required="">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required="">
+          </div>
+          <br>
+          <div class="form">
+            <textarea class="form-control" id="comments" name="comments" placeholder="Message" rows="1"></textarea>
+          </div>
+        </div>
+      <div class="btn">
+        Send
+      </div>
+    </div>
+    <img class="street-image" src="https://www.w3schools.com/w3images/map.jpg" alt="street-img">
+    <br>
+    <br>
+    <br>
+    <div class="footers">
+      <a href="https://www.linkedin.com/" class="fa fa-linkedin" target="_blank" rel="noreferrer noopener"></a>
+      <a href="https://www.pinterest.com" class="fa fa-pinterest"target="_blank" rel="noreferrer noopener"></a>
+      <a href="https://www.reddit.com" class="fa fa-reddit"target="_blank" rel="noreferrer noopener"></a>
+      <p class="copyright">©2022 Aryaman Choudhary.</p>
+    </div>
+  </body>
+</html>
